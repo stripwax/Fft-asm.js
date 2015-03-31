@@ -1,15 +1,6 @@
 <!DOCTYPE>
 <html>
-<body onload="Init()">
-<h1>asm.js FFT module test</h1>
-<canvas id="cv" width="512" height="256"></canvas><br/>
-<button onclick="Start(100,true)">Start (ASM, 100times)</button><br/>
-<button onclick="Start(10000,true)">Start (ASM, 10000times)</button><br/>
-<button onclick="Start(100,false)">Start (NoASM, 100times)</button><br/>
-<button onclick="Start(10000,false)">Start (NoASM, 10000times)</button><br/>
-<hr/>
-<p id="stat"></p>
-<hr/>
+<head>
 <script src="fft-asm.js"></script>
 <script src="fft-asm-noasm.js"></script>
 <script src="fft-asm-lib.js"></script>
@@ -68,6 +59,18 @@ function Start(n,asm) {
 	Draw("#f00",128);
 }
 </script>
+</head>
+<body onload="Init()">
+<h1>asm.js FFT module test</h1>
+<canvas id="cv" width="512" height="256"></canvas><br/>
+<button onclick="Start(100,true)">Start (ASM, 100times)</button><br/>
+<button onclick="Start(10000,true)">Start (ASM, 10000times)</button><br/>
+<button onclick="Start(100,false)">Start (NoASM, 100times)</button><br/>
+<button onclick="Start(10000,false)">Start (NoASM, 10000times)</button><br/>
+<hr/>
+<p id="stat"></p>
+<hr/>
+
 </body>
 </html>
 
